@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * Author - S Salgado 
  * Date   - 29/11/2020
  */
-@WebServlet(urlPatterns = { "/home", "*.abc" }, name="SimpleServlet", initParams = {
+@WebServlet(urlPatterns = { "/home", "*.abc" }, initParams = {
 		@WebInitParam(name = "AppName", value = "Demo Servlet") })
 public class SimpleServlet extends HttpServlet {
 

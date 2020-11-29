@@ -17,7 +17,7 @@
     	<param-value>New Servlet App</param-value>
     </init-param>
   </servlet>
-   <servlet-mapping>
+  <servlet-mapping>
     <servlet-name>SimpleServlet</servlet-name>
     <url-pattern>/home</url-pattern>
   </servlet-mapping>
