@@ -10,8 +10,8 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <context-param>
-    <param-name>Author</param-name>
-    <param-value>S Salgado</param-value>
+    	<param-name>AppName</param-name>
+    	<param-value>New Servlet App</param-value>
   </context-param>
   <servlet>
     <servlet-name>SimpleServlet</servlet-name>

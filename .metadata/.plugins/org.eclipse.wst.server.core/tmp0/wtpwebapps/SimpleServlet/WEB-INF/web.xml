@@ -9,6 +9,10 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <context-param>
+    <param-name>Author</param-name>
+    <param-value>S Salgado</param-value>
+  </context-param>
   <servlet>
     <servlet-name>SimpleServlet</servlet-name>
     <servlet-class>com.sanushi.javaweb.basics.SimpleServlet</servlet-class>

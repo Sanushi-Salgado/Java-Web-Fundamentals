@@ -13,18 +13,15 @@ import javax.servlet.http.HttpServletResponse;
  * Date   - 29/11/2020
  */
 @WebServlet(urlPatterns = { "/home", "*.abc" }, name="SimpleServlet", initParams = {
-		@WebInitParam(name = "AppName", value = "Demo Servlet"),
-		@WebInitParam(name = "Author", value = "Abc")})
+		@WebInitParam(name = "AppName", value = "Demo Servlet") })
 public class SimpleServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	String appName;
-	String author;
 
 	@Override
 	public void init() {
 		appName = getInitParameter("AppName");
-		author = getServletContext().getInitParameter("Author");
 	}
 
 	@Override
@@ -33,8 +30,8 @@ public class SimpleServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		if (name != null) {
 			response.setContentType("text/xml");
-			response.getWriter().printf("<application><greeting>Hello %s</greeting><app>%s</app><author>%s</author></application>", name,
-					appName, author);
+			response.getWriter().printf("<application><greeting>Hello %s</greeting><app>%s</app></application>", name,
+					appName);
 		} else
 			response.getWriter().append("Hello World!");
 	}

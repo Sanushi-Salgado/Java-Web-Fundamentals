@@ -9,10 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <context-param>
-    <param-name>Author</param-name>
-    <param-value>S Salgado</param-value>
-  </context-param>
   <servlet>
     <servlet-name>SimpleServlet</servlet-name>
     <servlet-class>com.sanushi.javaweb.basics.SimpleServlet</servlet-class>
@@ -20,6 +16,10 @@
     	<param-name>AppName</param-name>
     	<param-value>New Servlet App</param-value>
     </init-param>
+    <context-param>
+    	<param-name>AppName</param-name>
+    	<param-value>New Servlet App</param-value>
+    </context-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>SimpleServlet</servlet-name>
