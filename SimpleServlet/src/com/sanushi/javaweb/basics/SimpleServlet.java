@@ -36,7 +36,8 @@ public class SimpleServlet extends HttpServlet {
 			response.getWriter().printf("<application><greeting>Hello %s</greeting><app>%s</app><author>%s</author></application>", name,
 					appName, author);
 		} else
-			response.getWriter().append("Hello World!");
+			//response.getWriter().append("Hello World!");
+			throw new ServletException("Name cannot be null! Please enter a name.");
 	}
 
 	@Override
