@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="app.css" rel="stylesheet" type="text/css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -17,18 +18,23 @@
 	%>
 	
 	<h1> Welcome <%= user.getName() %> </h1>
+	<h2> Using expression language ${ new_user.name } </h2>
 
+	<div class="${ form1.formCssClass } ">
 	<form action="home" method="post">
 		Name: <input type="text" name="name"> <br>
 		<input type="submit" value="Submit">
 	</form>
+	</div>
 	
 	
 	<h2>Math Form</h2>
+	<div class="${ form2.formCssClass } ">
 	<form action="process.jsp">  
 		No1:<input type="text" name="n1" /><br/><br/>  
 		No1:<input type="text" name="n2" /><br/><br/>  
 		<input type="submit" value="divide"/>  
 	</form>  
+	</div>
 </body>
 </html>
