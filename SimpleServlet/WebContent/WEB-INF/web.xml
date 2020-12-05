@@ -13,14 +13,20 @@
     <param-name>Author</param-name>
     <param-value>S Salgado</param-value>
   </context-param>
+  
   <servlet>
     <servlet-name>SimpleServlet</servlet-name>
     <servlet-class>com.sanushi.javaweb.basics.SimpleServlet</servlet-class>
     <init-param>
-    	<param-name>AppName</param-name>
-    	<param-value>New Servlet App</param-value>
+      <param-name>AppName</param-name>
+      <param-value>New Servlet App</param-value>
     </init-param>
   </servlet>
+   <servlet>
+    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-class>com.sanushi.javaweb.basics.ControllerServlet</servlet-class> 
+  </servlet>
+  
   <servlet-mapping>
     <servlet-name>SimpleServlet</servlet-name>
     <url-pattern>/home</url-pattern>
@@ -33,4 +39,13 @@
     <servlet-name>SimpleServlet</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>ControllerServlet</servlet-name>
+    <url-pattern>*.mvcdemo</url-pattern>
+  </servlet-mapping>
+  
+  <error-page>
+    <location>/error.jsp</location>
+  </error-page>
 </web-app>

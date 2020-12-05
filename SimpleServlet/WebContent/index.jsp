@@ -1,3 +1,4 @@
+<%@ page import="com.sanushi.javaweb.basics.User" %>
 <%@ page errorPage="_error.jsp" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -9,6 +10,14 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
+
+	<% User user = (User) request.getAttribute("user");
+		if(user == null)
+			user =  new User();
+	%>
+	
+	<h1> Welcome <%= user.getName() %> </h1>
+
 	<form action="home" method="post">
 		Name: <input type="text" name="name"> <br>
 		<input type="submit" value="Submit">
