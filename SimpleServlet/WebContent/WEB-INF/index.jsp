@@ -1,5 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="com.sanushi.javaweb.basics.User" %>
-<%@ page errorPage="_error.jsp" %>
+<%@ page errorPage="error.jsp" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -28,7 +29,7 @@
 	</div>
 	
 	
-	<h2>Math Form</h2>
+	<h2><c:out value="Math Form" /></h2>
 	<div class="${ form2.formCssClass.name } ">
 	<form action="process.jsp">  
 		No1:<input type="text" name="n1" /><br/><br/>  
@@ -52,6 +53,31 @@
 		<h1>Using operators in Expression Language</h1>
 		<p>${ 3 == 2 }</p>
 		<p>${ user.name == "San" }</p>		
+	</div>
+	
+	
+	<div>
+		<c:if test="${!empty user.name}">
+		<p>Welcome ${ user.name }</p>
+		</c:if>
+		<c:if test="${empty user.name}">
+		<p>Welcome anonymous user</p>
+		</c:if>
+	</div>
+	
+	
+	<div>
+		<c:choose>
+			<c:when test="${ 3 + 2 == 4 }">
+				<p>Answer is incorrect</p>
+			</c:when>
+			<c:when test="${ 3 + 2 == 5 }">
+				<p>Answer is correct</p>
+			</c:when>
+			<c:otherwise>
+				<p>Answer is incorrect</p>
+			</c:otherwise>
+		</c:choose>
 	</div>
 	
 </body>
