@@ -46,5 +46,13 @@
 		<li> ${ form2.tabNames[3] } </li>
 	</ul>
 	</div>
+	
+	
+	<div>
+		<h1>Using operators in Expression Language</h1>
+		<p>${ 3 == 2 }</p>
+		<p>${ user.name == "San" }</p>		
+	</div>
+	
 </body>
 </html>
