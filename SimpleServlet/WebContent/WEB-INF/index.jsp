@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="app.css" rel="stylesheet" type="text/css">
-<title>Insert title here</title>
+<title>${ initParam.Author }</title>
 </head>
 <body>
 <%@include file="header.jsp"%>
@@ -20,7 +20,7 @@
 	<h1> Welcome <%= user.getName() %> </h1>
 	<h2> Using expression language ${ new_user.name } </h2>
 
-	<div class="${ form1.formCssClass } ">
+	<div class="${ form1.formCssClass.name } ">
 	<form action="home" method="post">
 		Name: <input type="text" name="name"> <br>
 		<input type="submit" value="Submit">
@@ -29,12 +29,22 @@
 	
 	
 	<h2>Math Form</h2>
-	<div class="${ form2.formCssClass } ">
+	<div class="${ form2.formCssClass.name } ">
 	<form action="process.jsp">  
 		No1:<input type="text" name="n1" /><br/><br/>  
 		No1:<input type="text" name="n2" /><br/><br/>  
 		<input type="submit" value="divide"/>  
 	</form>  
+	</div>
+	
+	
+	<div>
+	<ul>
+		<li> ${ form2.tabNames[0] } </li>
+		<li> ${ form2.tabNames[1] } </li>
+		<li> ${ form2.tabNames[2] } </li>
+		<li> ${ form2.tabNames[3] } </li>
+	</ul>
 	</div>
 </body>
 </html>

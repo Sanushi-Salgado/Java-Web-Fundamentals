@@ -2,15 +2,24 @@ package com.sanushi.javaweb.basics;
 
 public class AppSettings {
 	
-	private String formCssClass;
+	private CssClass formCssClass;
+	private String[] tabNames;
 
-	public String getFormCssClass() {
+
+	public CssClass getFormCssClass() {
 		return formCssClass;
 	}
 
-	public void setFormCssClass(String formCssClass) {
+	public void setFormCssClass(CssClass formCssClass) {
 		this.formCssClass = formCssClass;
 	}
 		
+	public String[] getTabNames() {
+		return tabNames;
+	}
+
+	public void setTabNames(String[] tabNames) {
+		this.tabNames = tabNames;
+	}
 
 }

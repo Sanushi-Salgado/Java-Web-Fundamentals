@@ -20,10 +20,19 @@ public class ControllerServlet extends HttpServlet {
 	@Override
 	public void init() {
 		AppSettings form1 = new AppSettings();
-		form1.setFormCssClass("blueUser");
-		
 		AppSettings form2 = new AppSettings();
-		form2.setFormCssClass("redUser");
+		
+		CssClass cssClass1 = new CssClass();
+		cssClass1.setName("blueUser");
+		
+		CssClass cssClass2 = new CssClass();
+		cssClass2.setName("redUser");
+		
+		String[] tabNames = {"SignIn", "Home", "Profile", "Settings"};
+		
+		form1.setFormCssClass(cssClass1);
+		form2.setFormCssClass(cssClass2);
+		form2.setTabNames(tabNames);
 		
 		getServletContext().setAttribute("form1", form1);
 		getServletContext().setAttribute("form2", form2);
