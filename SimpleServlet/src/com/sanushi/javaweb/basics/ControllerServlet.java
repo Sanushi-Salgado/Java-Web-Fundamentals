@@ -1,6 +1,8 @@
 package com.sanushi.javaweb.basics;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,9 +32,17 @@ public class ControllerServlet extends HttpServlet {
 		
 		String[] tabNames = {"SignIn", "Home", "Profile", "Settings"};
 		
+		List<Tab> tabs = new ArrayList<>();
+		tabs.add(new Tab("Home", "#home"));
+		tabs.add(new Tab("About", "#about"));
+		tabs.add(new Tab("Contact","#contact"));
+		tabs.add(new Tab("Settings", "#settings"));
+		
+		
 		form1.setFormCssClass(cssClass1);
 		form2.setFormCssClass(cssClass2);
 		form2.setTabNames(tabNames);
+		form2.setTabs(tabs);
 		
 		getServletContext().setAttribute("form1", form1);
 		getServletContext().setAttribute("form2", form2);

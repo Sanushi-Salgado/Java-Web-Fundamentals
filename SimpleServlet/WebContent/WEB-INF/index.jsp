@@ -40,12 +40,22 @@
 	
 	
 	<div>
-	<ul>
-		<li> ${ form2.tabNames[0] } </li>
-		<li> ${ form2.tabNames[1] } </li>
-		<li> ${ form2.tabNames[2] } </li>
-		<li> ${ form2.tabNames[3] } </li>
-	</ul>
+		<ul>
+			<li> ${ form2.tabNames[0] } </li>
+			<li> ${ form2.tabNames[1] } </li>
+			<li> ${ form2.tabNames[2] } </li>
+			<li> ${ form2.tabNames[3] } </li>
+		</ul>
+	</div>
+	
+	
+	
+	<div>
+		<ul>
+			<c:forEach items="${ form2.tabs }" var="tab">
+				<li><a href="${ tab.url }"> ${ tab.name } </a></li>
+			</c:forEach>
+		</ul>
 	</div>
 	
 	
