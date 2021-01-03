@@ -11,7 +11,17 @@
 <title>${ initParam.Author }</title>
 </head>
 <body>
+<c:import url="header.jsp" var="_header"/>
+${_header} 
+${_header} 
+${_header} 
+
 <%@include file="header.jsp"%>
+
+<a href="/process.jsp">Open Page</a>
+<a href="process.jsp">Open Page</a>
+<a href='<c:url value="/process.jsp"/>'>Open Page</a>
+
 
 	<% User user = (User) request.getAttribute("user");
 		if(user == null)
