@@ -1,8 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="h" %>
+
 <%@ page import="com.sanushi.javaweb.basics.User" %>
 <%@ page errorPage="error.jsp" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,11 +13,17 @@
 <link href="app.css" rel="stylesheet" type="text/css">
 <title>${ initParam.Author }</title>
 </head>
+
 <body>
 <c:import url="header.jsp" var="_header"/>
 ${_header} 
 ${_header} 
 ${_header} 
+
+
+<h:mytag user="Sanushi" location="Sri Lanka"/>
+<h:mytag user="${new_user.name}" />
+
 
 <%@include file="header.jsp"%>
 
@@ -27,6 +36,9 @@ ${_header}
 		if(user == null)
 			user =  new User();
 	%>
+	
+	
+	<h:profile user="${user}"/>
 	
 	<h1> Welcome <%= user.getName() %> </h1>
 	<h2> Using expression language ${ new_user.name } </h2>

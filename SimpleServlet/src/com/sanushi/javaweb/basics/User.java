@@ -3,7 +3,7 @@ package com.sanushi.javaweb.basics;
 public class User {
 
 	private String name;
-	private String email;
+	private String email = "user@gmail.com";
 	
 	
 	public String getName() {
